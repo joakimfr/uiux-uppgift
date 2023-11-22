@@ -1,0 +1,58 @@
+
+
+.left {
+  display: flex;
+  align-items: flex-start; /* Placera innehållet i övre vänstra hörnet */
+  justify-content: flex-start;
+  padding: 4rem 0 0 2rem;
+  flex: 1; 
+}
+
+.right {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Centrera innehållet vertikalt och horisontellt */
+  justify-content: center;
+  gap: 2rem;
+  padding: 2rem;
+  flex: 1; /* Tar upp hela höjden av parent (.home) */
+  
+}
+.home {
+  
+  background: #0F1624; 
+  display: flex;
+  flex-wrap: wrap;
+  
+ }
+
+.profile {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 2rem;
+
+  
+
+  &__image {
+    width: 200px;
+    border-radius: 50%;
+  }
+
+  &__desc {
+    color: white;
+  }
+
+  &__title {
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+  }
+
+  &__text {
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+  }
+}

@@ -1,6 +1,10 @@
 import ProjectCard from "../components/projectcard/ProjectCard"
+
+
 import './projects.scss'
 export default function Projects () {
+
+ 
 
   return (
     <main className="projects">

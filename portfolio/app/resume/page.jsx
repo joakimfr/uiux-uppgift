@@ -1,10 +1,51 @@
-
+import './resume.scss'
 
 export default function Resume () {
 
   return (
-    <main>
-      <h2>Resume</h2>
+    <main className='main'>
+
+      <section className='top'>
+        <aside className='about'>
+          <h2>Om mig</h2>
+          <p>Målinriktad och kreativ före detta plåtslagare med 10 års erfarenhet av att hantera båda större och mindre projekt. För närvarande studerar jag till front-end utvecklare och har slutfört hälften av utbildningen och i december ska vi ut i praktik. Jag är skicklig på planering, kommunikation och har utvecklat stark problemlösningsförmåga. Jag trivs både med att arbeta självständigt och i team och har en förmåga att anpassa mig till olika arbetsmiljöer. Min motivation för att lära mig och utvecklas, tillsammans med min kreativitet och noggrannhet, gör mig övertygad om att jag kommer vara framgångsrik i min nya karriär som front-end utvecklare.</p>
+        </aside>
+        <aside className='work'>
+          <h2>Tidigare arbete</h2>
+          <h4>Plåtslagare på Hägnens plåtslageri. 2013 - 2023</h4>
+          <ul>
+            <li>- Hanterat många stora och mindre projekt med nära kundkontakt.</li>
+            <li>- Utvecklat starka planerings och samarbetsfärdigheter inom teambaserade projekt.</li>
+            <li>- Blivit van vid att arbeta både självständigt och i team och haft stort ansvar för att leda projekt.</li>
+          </ul>
+          <div className='education'>
+            <h2>Utbildning</h2>
+            <p>Gymnasieexamen Bäckadalsgymnasiet. 2009 - 2012</p>
+            <p>Pågående utbildning Front-end utvecklare Jensen yrkeshögskola. 2022 – 2024</p>
+          </div>
+        </aside>
+      </section>
+
+      <section className='bottom'>
+        <div className='skills'>
+          <h2>Tekniska färdigheter</h2>
+          <ul>
+            <li>icon</li>
+            <li>icon</li>
+            <li>icon</li>
+            <li>icon</li>
+          </ul>
+        </div>
+        <div className='info'>
+          <h2>Kontakt</h2>
+        <ul>
+          <li>0735046544</li>
+          <li>Kålgårdsgatan 33, Jönköping</li>
+          <li>fritzjoakim@hotmail.com</li>
+        </ul>
+        </div>
+      </section>
+
     </main>
   )
 }

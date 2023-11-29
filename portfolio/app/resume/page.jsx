@@ -1,4 +1,7 @@
 import './resume.scss'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faEnvelope, faPhone, faLocationDot } from '@fortawesome/free-solid-svg-icons'
+import { faGithub, faLinkedin, faHtml5, faCss3Alt, faReact, faJs } from '@fortawesome/free-brands-svg-icons'
 
 export default function Resume () {
 
@@ -30,18 +33,22 @@ export default function Resume () {
         <div className='skills'>
           <h2>Tekniska färdigheter</h2>
           <ul>
-            <li>icon</li>
-            <li>icon</li>
-            <li>icon</li>
-            <li>icon</li>
+            <li className='skills__li'><FontAwesomeIcon icon={faJs} className='icon'/>Javascript</li>
+            <li className='skills__li'><FontAwesomeIcon icon={faHtml5} className='icon'/>Html</li>
+            <li className='skills__li'><FontAwesomeIcon icon={faCss3Alt} className='icon'/>Css</li>
+            <li className='skills__li'><FontAwesomeIcon icon={faReact} className='icon'/>React</li>
           </ul>
         </div>
         <div className='info'>
           <h2>Kontakt</h2>
         <ul>
-          <li>0735046544</li>
-          <li>Kålgårdsgatan 33, Jönköping</li>
-          <li>fritzjoakim@hotmail.com</li>
+          <li className='skills__li'><FontAwesomeIcon icon={faPhone} className='icon'/>0735046544</li>
+          <li className='skills__li'><FontAwesomeIcon icon={faLocationDot} className='icon'/>Kålgårdsgatan 33, Jönköping</li>
+          <li className='skills__li'><FontAwesomeIcon icon={faEnvelope} className='icon'/>fritzjoakim@hotmail.com</li>
+          <li className='skills__li'>
+            <FontAwesomeIcon icon={faGithub} className='icon'/>
+            <a href="https://github.com/joakimfr" target="_blank" rel="noopener noreferrer" className='gh-link'>Besök min GutHub-profil</a>
+          </li>
         </ul>
         </div>
       </section>

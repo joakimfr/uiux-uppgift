@@ -11,10 +11,12 @@
   &__logo {
     color: white;
     width: 80px;
+    font-size: 32px;
+    letter-spacing: -5px;
   }
   &__navbar {
     display: flex;
-    gap: 1.5rem;
+    gap: 2rem;
     color: white;
   }
 
@@ -27,8 +29,7 @@
 
   &__icons {
     height: 32px;
-    width: 32px;
-    background-color: white;;
+    color: white;
   }
 }
 

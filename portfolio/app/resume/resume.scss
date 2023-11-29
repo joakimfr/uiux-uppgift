@@ -87,3 +87,26 @@
     }
   }
 }
+
+.gh-link {
+ 
+    color: #0070f3; /* GitHub-färg */
+    text-decoration: none;
+    transition: color 0.3s ease; /* Gör övergången mjuk när färgen ändras */
+  
+}
+
+.gh-link:hover {
+  color: #0056b3;
+}
+
+.skills__li {
+  display: flex;
+  gap: 2rem;
+  
+}
+.icon {
+  height: 24px;
+  width: 21px;
+  
+}

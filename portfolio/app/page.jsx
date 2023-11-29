@@ -1,4 +1,3 @@
-import InfoCard from "./components/infocard/InfoCard"
 import Image from "next/image"
 import profile from '../public/profilepic.jpg'
 import './home.scss'
@@ -16,7 +15,7 @@ export default function Home() {
           src={profile}
           quality={100}
           placeholder='blur'
-          alt='profile picture'
+          alt='Profilbild av Joakim Fritz, studerande till front-end utvecklare'
         />
         <div className='profile__desc'>
           <h1 className='profile__title'>Joakim Fritz</h1>
@@ -25,30 +24,23 @@ export default function Home() {
         </div>
       </section>
       <section className="right">
-        <main className="card">
+        <article className="card">
           <Link href='/projects'>
             <div className='card__top'>
               <h1 className='card__title'>Projects</h1>
             </div>
           </Link>
           <p className='card__text'>Upptäck de spännande projekt jag har arbetat med. Från webbutveckling till kreativa företag, utforska min portfölj</p>
-        </main>
-        <main className="card">
+        </article>
+        <article className="card">
           <Link href='/projects'>
             <div className='card__top card__border'>
               <h1 className='card__title'>About me</h1>
             </div>
           </Link>
           <p className='card__text'>Upptäck de spännande projekt jag har arbetat med. Från webbutveckling till kreativa företag, utforska min portfölj</p>
-        </main>
-          <main className="card">
-            <Link href='/projects'>
-              <div className='card__top'>
-                <h1 className='card__title'>Contact</h1>
-              </div>
-            </Link>
-            <p className='card__text'>Upptäck de spännande projekt jag har arbetat med. Från webbutveckling till kreativa företag, utforska min portfölj</p>
-          </main>
+        </article>
+    
         </section>
       </main>
   )

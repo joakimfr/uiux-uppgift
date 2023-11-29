@@ -1,4 +1,5 @@
 import Image from "next/image"
+import './components/infocard/InfoCard.scss'
 import profile from '../public/profilepic.jpg'
 import './home.scss'
 import Link from 'next/link'
@@ -15,7 +16,7 @@ export default function Home() {
           src={profile}
           quality={100}
           placeholder='blur'
-          alt='Profilbild av Joakim Fritz, studerande till front-end utvecklare'
+          alt='Profilbild av Joakim Fritz'
         />
         <div className='profile__desc'>
           <h1 className='profile__title'>Joakim Fritz</h1>

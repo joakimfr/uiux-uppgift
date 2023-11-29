@@ -2,26 +2,34 @@
   "projects": [
     {
       "id": "1",
-      "title": "Project-one",
-      "info": "blablablablabla"
+      "title": "MovieFind",
+      "info": "blablablablabla",
+      "image": "/moviefind.png",
+      "githubLink": "https://github.com/joakimfr/movie-find"
     },
 
     {
       "id": "2",
-      "title": "Project-two",
-      "info": "blablablablabla"
+      "title": "E-Wallet",
+      "info": "blablablablabla",
+      "image": "/e-wallet.png",
+      "githubLink": "https://github.com/joakimfr/e-wallet-react"
     },
 
     {
       "id": "3",
-      "title": "Project-three",
-      "info": "blablablablabla"
+      "title": "Quiztopia",
+      "info": "blablablablabla",
+      "image": "/quiztopia.png",
+      "githubLink": "https://github.com/joakimfr/quiztopia-examination"
     },
 
     {
       "id": "4",
-      "title": "Project-four",
-      "info": "blablablablabla"
+      "title": "Strike Bowling",
+      "info": "blablablablabla",
+      "image": "/strike-bowling.png",
+      "githubLink": "https://github.com/joakimfr/cypress-strajkbowling"
     }
   ]
 }

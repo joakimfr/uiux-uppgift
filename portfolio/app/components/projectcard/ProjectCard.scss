@@ -3,7 +3,7 @@
 
 .project-card {
   height: 500px;
-  width: 400px;
+  max-width: 400px;
   border-radius: 40px 0px;
   border: 5px solid #2E4057;
   background: #0F1624;
@@ -15,21 +15,16 @@
   padding: 2rem;
 
   &__image {
-    width: 340px;
-    height: 200px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: green;
+   border-radius: 6px;
+    
   }
 
   &__title {
     color: #FFF;
     color: #FFF;
-    font-family: Inter;
     font-size: 24px;
     font-style: normal;
-    font-weight: 700;
+    font-weight: 600;
     line-height: normal;
   }
 
@@ -37,22 +32,27 @@
     color: #FFF;
     font-size: 16px;
     font-style: normal;
-    font-weight: 700;
+    font-weight: 400;
     line-height: normal;
   }
 
   &__button {
     display: flex;
-    padding: 9px 60px;
+    padding: 11px 60px;
     justify-content: center;
     align-items: center;
     border-radius: 20px;
     background: #333;
     color: #FFF;
+    transition: background 0.3s ease;
+
+    &:hover {
+      background: #555;
+    }
   }
 
   &__line {
-    background: #FFF;
+    background: #555;
     height: 3px;
     width: 85%;
     border-radius: 10px;

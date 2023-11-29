@@ -16,10 +16,10 @@ export default function Projects () {
 
   return (
     <main className="projects">
-      <h2 className="projects__title">Skolprojekt</h2>
+      <h1 className="projects__title">Skolprojekt</h1>
       <section className="projects__grid">
       {projects.map((project) => (
-          <ProjectCard key={project.id} title={project.title} info={project.info} />
+          <ProjectCard key={project.id} title={project.title} info={project.info} image={project.image} githubLink={project.githubLink} />
         ))}
       </section>
     </main>

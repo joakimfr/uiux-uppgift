@@ -7,7 +7,7 @@ export default function Resume () {
 
   return (
     <main className='main'>
-
+      
       <section className='top'>
         <aside className='about'>
           <h2>Om mig</h2>

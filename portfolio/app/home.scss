@@ -1,6 +1,16 @@
 
 
-.left {
+
+.home {
+  max-width: 1400px;
+  background: #0F1624; 
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 auto;
+}
+
+ .left {
+  margin-top: 2rem;
   display: flex;
   align-items: flex-start; /* Placera innehållet i övre vänstra hörnet */
   justify-content: flex-start;
@@ -9,6 +19,7 @@
 }
 
 .right {
+  margin-top: 2rem;
   display: flex;
   flex-direction: column;
   align-items: center; /* Centrera innehållet vertikalt och horisontellt */
@@ -18,13 +29,6 @@
   flex: 1; /* Tar upp hela höjden av parent (.home) */
   
 }
-.home {
-  
-  background: #0F1624; 
-  display: flex;
-  flex-wrap: wrap;
-  
- }
 
 .profile {
   display: flex;

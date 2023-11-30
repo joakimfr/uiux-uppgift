@@ -32,7 +32,7 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v3
         with:
-          path: 'portfolio' # <-- Uppdaterad sökväg till projektet
+          path: './portfolio' # <-- Uppdaterad sökväg till projektet
       - name: Detect package manager
         id: detect-package-manager
         run: |

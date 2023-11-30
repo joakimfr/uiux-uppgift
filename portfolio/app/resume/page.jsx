@@ -9,11 +9,11 @@ export default function Resume () {
     <main className='main'>
       
       <section className='top'>
-        <aside className='about'>
+        <article className='about'>
           <h2>Om mig</h2>
           <p>Målinriktad och kreativ före detta plåtslagare med 10 års erfarenhet av att hantera båda större och mindre projekt. För närvarande studerar jag till front-end utvecklare och har slutfört hälften av utbildningen och i december ska vi ut i praktik. Jag är skicklig på planering, kommunikation och har utvecklat stark problemlösningsförmåga. Jag trivs både med att arbeta självständigt och i team och har en förmåga att anpassa mig till olika arbetsmiljöer. Min motivation för att lära mig och utvecklas, tillsammans med min kreativitet och noggrannhet, gör mig övertygad om att jag kommer vara framgångsrik i min nya karriär som front-end utvecklare.</p>
-        </aside>
-        <aside className='work'>
+        </article>
+        <article className='work'>
           <h2>Tidigare arbete</h2>
           <h4>Plåtslagare på Hägnens plåtslageri. 2013 - 2023</h4>
           <ul>
@@ -26,7 +26,7 @@ export default function Resume () {
             <p>Gymnasieexamen Bäckadalsgymnasiet. 2009 - 2012</p>
             <p>Pågående utbildning Front-end utvecklare Jensen yrkeshögskola. 2022 – 2024</p>
           </div>
-        </aside>
+        </article>
       </section>
 
       <section className='bottom'>

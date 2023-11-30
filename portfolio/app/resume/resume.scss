@@ -4,16 +4,16 @@
   margin: 3rem auto;
   padding: 20px;
   color: white;
-  background-color: #0D1320; /* Mörk bakgrundsfärg */
-  border-radius: 10px; /* Rundade hörn */
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); /* Lätt skugga */
+  background-color: #0D1320; 
+  border-radius: 10px; 
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
 }
 
 .top {
   display: flex;
   justify-content: space-between;
   gap: 2rem;
-  border-bottom: 1px solid #444; /* Grå bottenlinje */
+  border-bottom: 1px solid #444; 
   padding-bottom: 1rem;
 
   .about,
@@ -25,13 +25,13 @@
     h2 {
       font-size: 24px;
       margin-bottom: 10px;
-      color: #f0f0f0; /* Ljus textfärg */
+      color: #f0f0f0;
     }
 
     p {
       font-size: 16px;
       line-height: 1.5;
-      color: #ccc; /* Grå textfärg */
+      color: #ccc; 
     }
 
     ul {
@@ -41,7 +41,7 @@
 
       li {
         margin-bottom: 5px;
-        color: #ccc; /* Grå textfärg */
+        color: #ccc; 
       }
     }
   }
@@ -61,7 +61,7 @@
     h2 {
       font-size: 24px;
       margin-bottom: 10px;
-      color: #f0f0f0; /* Ljus textfärg */
+      color: #f0f0f0; 
     }
 
     ul {
@@ -72,7 +72,7 @@
       li {
         font-size: 16px;
         margin-bottom: 5px;
-        color: #ccc; /* Grå textfärg */
+        color: #ccc;
       }
     }
   }
@@ -83,16 +83,16 @@
     p {
       font-size: 16px;
       margin-bottom: 10px;
-      color: #ccc; /* Grå textfärg */
+      color: #ccc; 
     }
   }
 }
 
 .gh-link {
  
-    color: #0070f3; /* GitHub-färg */
+    color: #0070f3;
     text-decoration: none;
-    transition: color 0.3s ease; /* Gör övergången mjuk när färgen ändras */
+    transition: color 0.3s ease;
   
 }
 

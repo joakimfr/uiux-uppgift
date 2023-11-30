@@ -10,10 +10,6 @@ permissions:
   pages: write
   id-token: write
 
-concurrency:
-  group: "pages"
-  cancel-in-progress: false
-
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -21,71 +17,41 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v3
 
-      - name: Detect package manager
-        id: detect-package-manager
-        run: |
-          if [ -f "portfolio/yarn.lock" ]; then
-            echo "manager=yarn" >> $GITHUB_OUTPUT
-            echo "command=install" >> $GITHUB_OUTPUT
-            echo "runner=yarn" >> $GITHUB_OUTPUT
-          elif [ -f "portfolio/package.json" ]; then
-            echo "manager=npm" >> $GITHUB_OUTPUT
-            echo "command=ci" >> $GITHUB_OUTPUT
-            echo "runner=npx --no-install" >> $GITHUB_OUTPUT
-          else
-            echo "Unable to determine package manager"
-            exit 1
-          fi
-
       - name: Setup Node
         uses: actions/setup-node@v3
         with:
           node-version: "16"
-          cache: ${{ steps.detect-package-manager.outputs.manager }}
-
-      - name: Setup Pages
-        uses: actions/configure-pages@v3
-          static_site_generator: next
-
-      - name: Restore cache
-        uses: actions/cache@v3
-        with:
-          path: |
-            portfolio/.next/cache
-          key: ${{ runner.os }}-nextjs-${{ hashFiles('portfolio/**/package-lock.json', 'portfolio/**/yarn.lock') }}-${{ hashFiles('portfolio/**/*.js', 'portfolio/**/*.jsx') }}
-          restore-keys: |
-            ${{ runner.os }}-nextjs-${{ hashFiles('portfolio/**/package-lock.json', 'portfolio/**/yarn.lock') }}-
 
       - name: Install dependencies
-        run: ${{ steps.detect-package-manager.outputs.manager }} ${{ steps.detect-package-manager.outputs.command }} && cd portfolio
+        run: npm install
 
       - name: Build with Next.js
-        run: ${{ steps.detect-package-manager.outputs.runner }} next build
+        run: npm run build --prefix portfolio
 
       - name: Static HTML export with Next.js
-        run: ${{ steps.detect-package-manager.outputs.runner }} next export
+        run: npm run export --prefix portfolio
 
       - name: Upload artifact
         uses: actions/upload-artifact@v2
         with:
-          name: portfolio-artifact
+          name: build-artifact
           path: portfolio/out
 
   deploy:
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
     runs-on: ubuntu-latest
     needs: build
     steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+
       - name: Download artifact
         uses: actions/download-artifact@v2
         with:
-          name: portfolio-artifact
-          path: portfolio-out
+          name: build-artifact
+          path: portfolio/out
 
       - name: Deploy to GitHub Pages
-        id: deployment
-        uses: actions/deploy-pages@v2
-          token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: portfolio-out
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: portfolio/out

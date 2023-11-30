@@ -36,7 +36,7 @@ return (
               <h1 className='card__title'>Projects</h1>
             </div>
           </Link>
-          <p className='card__text'>Upptäck de spännande projekt jag har arbetat med. Från webbutveckling till kreativa företag, utforska min portfölj</p>
+          <p className='card__text'>Upptäck de spännande projekt jag har arbetat med. Det är mindre projekt som vi har haft som uppgifter i skolan.</p>
         </article>
 
         <article className="card">

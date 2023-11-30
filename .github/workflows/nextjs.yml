@@ -29,9 +29,9 @@ jobs:
         id: detect-package-manager
         run: |
           if [ -f "yarn.lock" ]; then
-            echo "yarn" >> $GITHUB_ENV
+            echo "PACKAGE_MANAGER=yarn" >> $GITHUB_ENV
           elif [ -f "package.json" ]; then
-            echo "npm" >> $GITHUB_ENV
+            echo "PACKAGE_MANAGER=npm" >> $GITHUB_ENV
           else
             echo "Unable to determine package manager"
             exit 1
@@ -40,7 +40,7 @@ jobs:
         uses: actions/setup-node@v3
         with:
           node-version: "16"
-          cache: ${{ steps.detect-package-manager.outputs.manager }}
+          cache: ${{ env.PACKAGE_MANAGER }}
       - name: Setup Pages
         uses: actions/configure-pages@v3
         with:
